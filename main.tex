@@ -1,0 +1,505 @@
+%%% Plantilla creada para Proyecto de Investigación
+%%% del Bachillerato de Excelencia, IES San Mateo, Madrid
+%%% Por Roberto Rodríguez del Río y
+%%% María Esteban García
+%%% rrdelrio@ucm.es
+%%% mariaesteban.edu@gmail.com
+%%% Ver 2.0, Junio 2023
+\documentclass[a4paper,12pt]{article} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb} 
+%\usepackage{palatino}
+
+\usepackage{graphicx} 
+\usepackage[hidelinks]{hyperref} %Para que aparezcan con colores las hiperreferencias hay que quitar la opción hidelinks
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{eurosym}
+\usepackage{color}
+\usepackage{titling}
+\usepackage{lipsum}
+\usepackage{tocbibind} 
+\usepackage{newpxtext}
+
+\usepackage[backend=biber,style=numeric,giveninits=true]{biblatex} %Para gestionar la bibliografía en un archivo aparte
+\addbibresource{bibliografia.bib} %Archivo en el que está la bibliografía
+
+
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=4cm]{geometry}
+
+
+\pagestyle{fancy}
+
+
+%%% Para las cabeceras
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\headheight=50pt
+%%% 
+\newcommand{\vacio}{\phantom{relleno}}
+
+%%% Para que las ecuaciones se numeren
+%%% con el número de sección y el de ecuación.
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+
+% Color azul para algunos 
+% textos de la portada
+\definecolor{azulportada}{rgb}{0.21176,0.37255,0.56863}
+
+%%%% Azul para textos de headings
+\definecolor{azulinterior}{rgb}{0.21176,0.37255,0.56863}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Datos del proyecto %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%TÍTULO
+%%% Escribirlo en minúsculas, el programa
+%%% lo pondrá en mayúsculas en la portada.
+\title{Título del proyecto de investigación}
+%%%% AUTOR
+\author{Leonardo Eulero Gaussiano}
+%%%%%%%%%%%%%%%%
+%%%%%% DIRECTOR DEL TRABAJO
+%%%%%%% Cambiar el nombre siguiente
+\newcommand{\director}{D. Evaristo Hilbert Feynman }
+%%%%%%%%%%%%%%%
+
+\linespread{1.25}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage} %%%%% Aquí no hay que tocar nada.
+	%%%% Las siguientes instrucciones generarán automáticamente
+	%%%% la portada de tu proyecto.
+	%%% Cambio de la estructura de esta página
+\newgeometry{left=0.6cm,top=1.3cm,bottom=1.2cm}
+
+\fbox{\parbox[c]{18.5cm}{
+\begin{center}
+\vspace{1.5cm}
+{\fontfamily{ppl}\fontsize{24}{6}\selectfont{Instituto San Mateo}}\\
+[1em]
+{\fontfamily{ppl}\fontsize{16}{5}\selectfont{Bachillerato de Excelencia}}\\
+[1em]
+{\fontfamily{ppl}\fontsize{26}{5}\selectfont{PROYECTO DE INVESTIGACIÓN}}\\
+[2.6cm]
+% Autor del trabajo de investigación
+\textcolor{azulportada}{\fontfamily{ppl}\fontsize{16}{5}\selectfont{\theauthor}}\\
+[1cm]
+% Título del trabajo
+\textcolor{azulportada}
+{\fontfamily{ppl}\fontsize{30}{5}\selectfont{\textsc{\MakeUppercase{\thetitle}}}}\\
+%{\Huge\textbf{\thetitle}}\\
+[1cm]
+\includegraphics[width=5.5cm]{logosanmateo.png}
+\\[2cm]
+{\fontfamily{ppl}\fontsize{16}{5}\selectfont{Trabajo dirigido por}}\\
+[0.5cm]
+{\fontfamily{ppl}\fontsize{16}{5}\selectfont{\director}}\\
+[2cm]
+{\fontfamily{ppl}\fontsize{16}{5}\selectfont{curso 2022-2023}}\\
+[2cm]
+\end{center}
+}}
+ 
+\restoregeometry
+ %%%% Volvemos a la estructura de la página normal
+
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{%\Large
+
+\newpage
+
+%%%Encabezamiento y pie de página
+%%% También se genera automáticamente
+%%% Mejor no tocarlo mucho.
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[R]{
+	\textcolor{azulinterior}{\fontfamily{ppl}\fontsize{14}{4}\selectfont{\textbf{\thetitle}}}\\
+\textcolor{azulportada}{\fontfamily{ppl}\fontsize{10}{3}\selectfont{Proyecto de investigación del BE -- curso 2022-2023}}\\
+{\fontfamily{ppl}\fontsize{10}{3}\selectfont{\theauthor}}}
+\fancyhead[L]{\vacio}
+
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyfoot[L]{\footnotesize Ensayo BE --- Instituto San Mateo --- curso 2022-2023}
+\fancyfoot[C]{\vacio}
+\fancyfoot[R]{\footnotesize Página \thepage}
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+\
+
+\vacio
+
+\
+
+\subsection*{Resumen}
+En no más de cinco líneas se ha de escribir un resumen del contenido del ensayo: qué se pretendía probar/describir/discutir; cuál era el 'estado de la cuestión’; qué método se ha empleado; cuáles son las conclusiones alcanzadas en sustancia.
+
+
+\subsection*{Abstract}
+\textsl{
+The content of the paper must be summed up in no more than five lines: what was the aim of the paper; what was the ‘State of the Art’; which method has been used; what are the main conclusions.}
+
+\ %% Así hago que se abra más espacio entre renglones.
+
+\
+
+\hrule
+
+\
+
+\
+
+
+\paragraph{Palabras clave:} dos o tres palabras o conceptos (grupos de palabras) que permitan identificar el trabajo realizado y encuadrarlo en una ciencia o saber concreto.
+
+\
+
+
+\paragraph{Keywords:} 
+\textsl{
+Two or three words or ideas that allow to frame the paper into a specific science or field of knowledge.}
+
+
+
+
+
+
+
+\newpage
+
+%%% En esta página va el índice,
+%%% pero no hay que hacer nada porque 
+%%% se generará automáticamente.
+
+\tableofcontents
+
+\newpage
+
+
+
+\section{Presentación}
+
+Aquí la presentación del proyecto.
+%
+
+\section{Esta es la segunda sección}
+
+Se pueden hacer secciones, que después aparecerán automáticamente en el índice.
+
+\subsection{Esta es una subsección}
+
+También se pueden hacer subsecciones. Incluso, subsubsecciones.
+
+\subsubsection{Y esto es una subsubsección}
+
+Y seguirán apareciendo en el índice automáticamente.
+
+
+\section{Fórmulas}
+
+Lo más interesante de \LaTeX \ es la manera en la que se pueden escribir fórmulas.
+
+
+Podemos escribir una fórmula en el renglón en el que estamos escribiendo. Por ejemplo, $a^2=b^3+c^4$, escribiendo \verb|$a^2=b^3+c^4$|.
+
+Puede que queramos destacar la fórmula, entonces es conveniente escribirla en \textsl{estilo exposición}, es decir, en un renglón aparte y centrada. Así,
+$$\lim_{x\to +\infty}\dfrac{x^3-\sqrt[4]{3x^5-\pi^e}}{\sin(x)+\ln(x)}$$
+En este caso, hay que escribir la fórmula doblando los dólares, \verb|$$fórmula$$|. 
+
+
+\subsection{Cálculos encadenados}
+
+Cuando queremos indicar una cadena de cálculos, no se hace en un mismo renglón, separando con iguales, como a veces hacemos en la pizarra, sino que lo correcto es hacerlo así
+$$\begin{array}{lll}
+(x+y)^2&=&(x+y)(x+y)\\
+&=&x^2+xy+yx+y^2\\
+&=&x^2+2xy+y^2
+\end{array}
+$$
+
+\subsection{Fórmulas con etiquetas}
+
+La forma de presentar el trabajo depende del contenido final. Si no contiene demasiadas fórmulas, quizá se puedan escribir como acabamos de decir antes, pero si la cantidad de fórmulas que aparecen es importante, es conveniente etiquetarlas de alguna forma. Esto hace que cada vez que queremos referirnos a una fórmula anterior, no sea necesario volver a escribirla, sino simplemente escribir una referencia. Veamos un par de ejemplos.
+
+\ 
+
+\hrule
+
+\ 
+
+El volumen de una región acotada en  el espacio se puede calcular mediante la fórmula siguiente:
+\begin{equation}
+\label{volumen}
+\text{Vol}(\Omega)=\int _\Omega 1\ dxdydz
+\end{equation}
+
+Y el flujo a través de una superficie $S$ de un campo vectorial $\vec{F}$, se puede calcular mediante la integral siguiente:
+\begin{equation}
+\label{flujo}
+\int_S \vec{F}\cdot d\vec{S}
+\end{equation}
+
+\ 
+
+\hrule
+
+\ 
+
+Estas fórmulas se han escrito con los siguientes códigos:
+
+\begin{verbatim}
+\begin{equation}
+\label{volumen}
+\text{Vol}(\Omega)=\int _\Omega 1\ dxdydz
+\end{equation}
+\end{verbatim}
+
+Y la segunda,
+
+\begin{verbatim}
+\begin{equation}
+\label{flujo}
+\int_S \vec{F}\cdot d\vec{S}
+\end{equation}
+\end{verbatim}
+
+Las hemos etiquetado con \verb|volumen| y \verb|flujo|, respectivamente. Si ahora, en cualquier parte del documento, queremos referirnos a la ecuación de del volumen.
+
+\ 
+
+\hrule
+
+\ 
+
+Como mencionamos anteriormente, para calcular el volumen de un sólido en el espacio, se puede utilizar la fórmula (\ref{volumen}). Y para calcular el flujo de un campo vectorial a través de una superficie, se puede utilizar la fórmula (\ref{flujo}).
+
+\ 
+
+Hemos escrito \verb|(\ref{volumen})| y \verb|(\ref{flujo})|, respectivamente. Incluso en el pdf resultante aparecerá un \textsl{enlace} a la fórmula en cuestión.
+
+La numeración de cada fórmula está compuesta por dos números, el de la sección dentro de la cual está la fórmula y el número que ocupa la fórmula dentro de esta sección. (Se pueden numerar de otras formas, por supuesto).
+
+
+
+\section{Figuras}
+
+
+Hay muchas formas de insertar figuras en un documento \LaTeX. En primer lugar, debemos de disponer de un archivo de tipo gráfico con la suficiente calidad. Admite muchos formatos, aunque quizá los que mejor funcionen sean los de tipo .png, .jpg.
+
+ Aquí van algunos ejemplos de cómo se pueden poner figuras con diferentes disposiciones dentro del texto.
+
+\begin{figure}[h]
+\begin{minipage}[c]{.45\linewidth}
+	\begin{center}
+	\includegraphics[width=5cm]{logosanmateo.png}
+	\caption{Logo San Mateo}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+	\begin{center}
+	\includegraphics[width=5cm]{logosanmateo.png}
+	\caption{Logo San Mateo}
+	\end{center}
+\end{minipage}
+\end{figure}
+
+Dentro del fichero fuente \verb|proyecto_sanma.tex| encontrarás el código que ha generado la figura anterior. 
+
+Al igual que en el caso de las ecuaciones, utilizando exactamente el mismo procedimiento, se pueden etiquetar las figuras para referirnos a ellas en alguna otra parte del texto.
+
+\ 
+
+\section{Un poco de texto de relleno}
+
+
+\lipsum[1-5]
+
+
+
+\subsection{Otras formas de insertar figuras}
+
+Estas son otras formas de insertar las figuras.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{logosanmateo.png}
+\caption{El logo centrado}
+\end{figure}
+
+
+\begin{figure}%[h]
+	\begin{minipage}[c]{.45\linewidth}
+		Podemos disponer texto junto a una figura, como en este caso.
+		
+		También se puede hacer que la figura aparezca a la izquierda y el texto a la derecha.
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{.45\linewidth}
+		\begin{center}
+			\includegraphics[width=4cm]{logosanmateo.png}
+			\caption{Logo San Mateo}
+		\end{center}
+	\end{minipage}
+\end{figure}
+
+Aunque las figuras se pueden poner en anexos al trabajo, en muchas ocasiones puede resultar útil que estén dentro del texto porque ayudan a comprender mejor las ideas que se quieren exponer. El autor del trabajo debe valorar qué es lo más conveniente.
+
+\section{Notas a pie de página}
+
+Aunque hay quien opina que no es conveniente poner demasiadas, para no sobrecargar el texto, también se pueden poner notas\footnote{Una nota a pie de página.} a pie de página. 
+
+Para conseguir la nota hemos escrito lo siguiente: 
+
+... se pueden poner notas\verb|\footnote{texto nota}| a pie de página.
+
+Aquí va otra nota\footnote{Otra nota más.} a pie de página.
+
+\section{Ya sólo queda la bibliografía}
+
+Añadimos los items de la bibliografía en un archivo aparte, que hemos llamado \verb|bibliografia.bib|. 
+Tenemos que añadir cada item según la sintáxis estándar llamada \verb|bibtex|.
+
+Cada item se cita con la clase correspondiente: \verb|@article| para los artículos, \verb|@book| para los libros, \verb|@online| para las páginas web... 
+Después de poner la clase de referencia bibliográfica, elegiremos una etiqueta, que será la que utilizaremos para citar dicha fuente.
+Y después de la etiqueta, damos valor a cada uno de los campos pertinentes (título, autores, año, editorial, volumen,...)
+
+Veamos un ejemplo de un item que aparece en el archivo \verb|bibliografia.bib|:
+
+\begin{verbatim}@article{RoZu03,
+  title={Series de {F}ourier y fen\'omeno de {G}ibbs},
+  author={Rodr{\'i}guez del R{\'i}o, Roberto and Zuazua, Enrique},
+  journal={Cubo Mat. Educ},
+  volume={5},
+  pages={185--224},
+  year={2003}
+}
+\end{verbatim}
+
+El ejemplo es un artículo cuya etiqueta es \verb|RoZu03| (suelen usarse las dos primeras letras del apellido(s) del autor(es) y el año de publicación). Los campos asociados a esta cita son: título, autor, revista, volumen, páginas y año.
+
+\paragraph{Atención 1:} En el archivo aparte con la bibliografía no pueden aparecer acentos: en lugar de \verb|ó| tiene que aparecer \verb|\'o|. (La í es un caso especial, hay que escribirlo \verb|{\'i}|).
+\paragraph{Atención 2:}  En el archivo aparte con la bibliografía  las mayúsculas de los títulos distintas de la primera letra deben ir entre llaves: en lugar de \verb|Series de Fourier| tiene que aparecer \verb|Series de {F}ourier|.
+
+\subsection{Cómo añadir en el texto una referencia bibliográfica}
+
+
+Al igual que ocurre con las ecuaciones, las referencias de la bibliografía se pueden citar en el texto mediante la etiqueta que le pongamos a cada una. Por ejemplo, para citar el artículo \cite{RoZu03} (el del ejemplo anterior),  se escribe \verb|\cite{RoZu03}|.
+
+Aunque en el archivo aparte tengamos muchos items, en la bibliografía solo aparecerán aquellos que hayamos citado en nuestro trabajo. 
+Si queremos que el artículo cuya etiqueta es \verb|rrr1| aparezca en al bibliografía aunque no lo hayamos citado explícitamente, añadiremos al final de este apartado la instrucción \verb|\phantom{\cite{rrr1}}|.
+
+
+
+
+\paragraph{Enlaces en la bibliografía:} Si la referencia que ponemos en la bibliografía se puede encontrar en internet, resulta interesante poner, al final, la dirección para que pueda ser consultada, tal como hemos hecho en el caso de la página web \cite{biblatex}. Por cierto, en esta página se encuentra más información acerca de cómo citar. 
+Por supuesto, los enlaces que se pongan deben dirigir a páginas que cumplan con todos los requisitos legales en cuanto al respeto a los derechos de la propiedad intelectual.
+
+%%% Referencias que no se 
+%%%%han citado pero queremos 
+%%%%%que aparezcan en la bibliografía
+\phantom{{\cite{banks}}}
+\phantom{{\cite{ausubel}}}
+\phantom{{\cite{otro}}}
+\phantom{{\cite{bacaer}}}
+
+
+
+\section{Conclusión}
+Y aquí sólo queda escribir las conclusiones a las que hayamos llegado. 
+
+
+\newpage
+
+%%%%%%%%Bibliografía 
+
+
+\printbibliography[heading=bibintoc,title={Bibliografía}]
+
+\newpage
+
+\section*{Agradecimientos}
+
+Esto es por si queremos agradecer a alguien. Aunque no vamos a hacer que aparezca en el índice. 
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+Versión alternativa de la Bibliografía.
+
+\section{Ya sólo queda la bibliografía}
+
+Un poco más de relleno.
+
+\lipsum[1-2]
+
+\subsection{La bibliografía en página aparte}
+
+Lo mejor es escribir la bibliografía en una página nueva. 
+
+Al igual que ocurre con las ecuaciones, las referencias de la bibliografía se pueden citar en el texto mediante la etiqueta que le pongamos a cada una. (Consultar el fichero fuente para ver cómo). 
+
+Por ejemplo, si quiero referirme al artículo \cite{ausubel}, o bien al libro \cite{bacaer}, lo puedo hacer escribiendo \verb|\cite{etiqueta}|.  
+
+\
+
+\paragraph{Enlaces en la bibliografía:} Si la referencia que ponemos en la bibliografía se puede encontrar en internet, resulta interesante poner, al final, la dirección para que pueda ser consultada. Por supuesto, los enlaces que se pongan deben dirigir a páginas que cumplan con todos los requisitos legales en cuanto al respeto a los derechos de la propiedad intelectual.
+
+\section{Conclusión}
+Y aquí sólo queda escribir las conclusiones a las que hayamos llegado.
+
+
+\newpage
+
+\renewcommand\refname{Bibliografía}
+
+\begin{thebibliography}{9}
+
+\bibitem[A]{aligica} P.D. Aligica. \textsl{Julian Simon and the “Limits to Growth” Neo-Malthusianism}, Electronic Journal of Sustainable Development, \textbf{1}, 3, (2009), pp. 73-84. (http://goo.gl/23G1Oo)
+
+\bibitem[Au]{ausubel} J. H. Ausubel y P. S. Meyer. \textsl{Carrying Capacity: A Model with
+Logistically Varying Limits, Technological Forecasting and Social Change},
+\textbf{61}, 3, (1999), pp. 209-214. http://goo.gl/Lpc4g4
+
+\bibitem[Al]{alvarez} N. Álvarez-Vázquez, P.A. Pérez y J. Rodríguez-Ruiz. \textsl{Métodos y
+modelos matemáticos de la demografía}, (trabajo), Departamento de Economía
+Aplicada Cuantitativa, UNED, Málaga, 1997. http://goo.gl/n1Z2nM
+
+\bibitem[B]{bacaer} N. Bacaër. \textsl{A Short History of Mathematical Population Dynamics},
+Springer-Verlag, Londres, 2011. http://goo.gl/1LhzMB
+
+\bibitem[Ba]{banks} R. B. Banks. \textsl{Growth and Diffusion Phenomena: Mathematical
+Frameworks and Applications}, Springer-Verlag, Berlín, 1994.
+
+
+\end{thebibliography}
+
+
+\newpage
+
+\section*{Agradecimientos}
+
+Esto es por si queremos agradecer a alguien. Aunque no vamos a hacer que aparezca en el índice. 
+
+\end{document}
