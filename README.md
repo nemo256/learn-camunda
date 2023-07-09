@@ -11,7 +11,4 @@
 ![Maintenance](https://shields.io/maintenance/yes/2023?style=for-the-badge)
 ![License](https://shields.io/github/license/nemo256/learn-camunda?style=for-the-badge)
 
-<!-- Demo image -->
-![Demo](demo.png)
-
 </div>
