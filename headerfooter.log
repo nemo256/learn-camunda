@@ -1,0 +1,31 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  9 JUL 2023 11:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**/home/n3m0/work/learn-camunda/headerfooter.tex
+(/home/n3m0/work/learn-camunda/headerfooter.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+! Undefined control sequence.
+<argument> \undefinedpagestyle 
+                               
+l.1 \pagestyle{fancy}
+                     
+? 
+! Emergency stop.
+<argument> \undefinedpagestyle 
+                               
+l.1 \pagestyle{fancy}
+                     
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 17 strings out of 477985
+ 532 string characters out of 5840059
+ 1849388 words of memory out of 5000000
+ 20316 multiletter control sequences out of 15000+600000
+ 512287 words of font info for 32 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 13i,0n,12p,95b,10s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
