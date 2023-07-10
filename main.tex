@@ -1,6 +1,10 @@
 \documentclass[12pt]{article}
 
 \usepackage{EngReport}
+\usepackage{titleref}
+\makeatletter
+\newcommand*{\currentname}{\TR@currentTitle}
+\makeatother
 
 \graphicspath{{Images/}}
 \bibliography{Sources}
@@ -63,23 +67,37 @@ Here are the foundational elements of BPMN:
     \item Data Objects.
   \end{itemize}
 
+\pagebreak
+
   \subsection{Learning Process and Resources}
 I started by learning the concepts of each elements used in BPMNs (tasks, symbols, activities...), and then since I had previous knowledge of modeling languages and UML diagrams, so it all seemed similiar.
 Then, I created some simple examples :
 One of them was automating a Car Starting System (Each car executes some checks before starting).
 I also read some best practices on using BPMNs.
 
-\pagebreak
-
 \section{What is Camunda ?}
+
   \subsection{Introduction}
+
+Camunda is an open-source platform for workflow and decision automation. It provides a powerful workflow engine, BPMN modeling capabilities, and tools for managing and executing business processes. With Camunda, organizations can automate and optimize their business processes, improve efficiency, and enhance visibility into process execution.
+
   \subsection{Installation and Setup}
+
+Camunda is fairly simple to install (for me I installed it in linux):
+
+  \begin{itemize}
+    \item Downloading Camunda Platform 7 Community edition from (https://camunda.com/download/)
+    \item Activities (Tasks, Sub-Processes, and Call activities).
+    \item Events (Start Events, Intermediate Events, and End Events).
+    \item Gateways (Exclusive, Parallel, and Inclusive Gateways)
+    \item Sequence Flow.
+  \end{itemize}
 
 \pagebreak
 
 \section{Creating a Simple Process}
-  \subsection{Designing a Process using Camunda Modeler}
-  \subsection{Executing the Process with Camunda's Workflow Engine}
+  \subsection{Designing a Process}
+  \subsection{Executing the Process}
 
 \pagebreak
 
@@ -91,7 +109,6 @@ I also read some best practices on using BPMNs.
 \pagebreak
 
 \section{What I Learned}
-  \subsection{Challenges, Successes, and Some Takeaways}
 
 \pagebreak
 
