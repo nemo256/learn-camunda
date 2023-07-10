@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  9 JUL 2023 12:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  10 JUL 2023 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -817,12 +817,13 @@ me/n3m0/work/learn-camunda/main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [1] [2]
-[3] [4] [5] [6] [7] [8]
+ [1] [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3] [
+4] [5]
+[6] [7]
 
-LaTeX Warning: Empty bibliography on input line 76.
+LaTeX Warning: Empty bibliography on input line 81.
 
-[9] (/home/n3m0/work/learn-camunda/main.aux)
+[8] (/home/n3m0/work/learn-camunda/main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -836,21 +837,22 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17139 strings out of 477985
- 357486 string characters out of 5840059
- 1861388 words of memory out of 5000000
- 37146 multiletter control sequences out of 15000+600000
- 518120 words of font info for 52 fonts, out of 8000000 for 9000
+ 17143 strings out of 477985
+ 357538 string characters out of 5840059
+ 1858388 words of memory out of 5000000
+ 37148 multiletter control sequences out of 15000+600000
+ 518457 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,12n,91p,707b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on /home/n3m0/work/learn-camunda/main.pdf (10 pages, 56967 bytes
-).
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
+cm-super/sfrm1200.pfb>
+Output written on /home/n3m0/work/learn-camunda/main.pdf (9 pages, 62305 bytes)
+.
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
