@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  10 JUL 2023 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  10 JUL 2023 14:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -837,9 +837,6 @@ ttps://camunda.com/download/)
 LaTeX Warning: Empty bibliography on input line 127.
 
 [9] (/home/n3m0/work/learn-camunda/main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -856,7 +853,7 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 cm-super/sfrm1200.pfb>
-Output written on /home/n3m0/work/learn-camunda/main.pdf (10 pages, 71499 bytes
+Output written on /home/n3m0/work/learn-camunda/main.pdf (10 pages, 71506 bytes
 ).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
