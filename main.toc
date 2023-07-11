@@ -10,5 +10,6 @@
 \contentsline {section}{\numberline {4}Creating a Simple Process}{6}{}%
 \contentsline {subsection}{\numberline {4.1}Designing a Process}{6}{}%
 \contentsline {subsection}{\numberline {4.2}Executing the Process}{7}{}%
-\contentsline {section}{\numberline {5}What I Learned}{8}{}%
-\contentsline {section}{\numberline {6}Conclusion}{9}{}%
+\contentsline {subsection}{\numberline {4.3}Adding an external task (service task)}{8}{}%
+\contentsline {section}{\numberline {5}What I Learned}{9}{}%
+\contentsline {section}{\numberline {6}Conclusion}{10}{}%
