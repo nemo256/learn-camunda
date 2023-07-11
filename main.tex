@@ -150,11 +150,37 @@ Here is the process I used to deploy and execute the process:
 
 In this section I will be implementing small script in python that will be integrated with camunda as a service task.
 
-Here are the steps it took me to implement it:
+Here are the steps it took me to implement it (following instructions from https://github.com/camunda-community-hub/camunda-external-task-client-python3):
+
+\begin{itemize}
+  \item First I initialized a new python project using a python virtual environment `python -m venv venv`, then sourcing the `venv/bin/activate` script to activate the python virtual environment.
+  \item Next, I installed the camunda external task client using the command `pip install camunda-external-task-client-python3`
+  \item Then, I used the command `pip freeze $ > $ requirements.txt` to save all the dependencies.
+  \item I then created a simple BPMN process using camunda modeler which contains a service task which has a topicName (for integration) as you can see in figure \ref{fig:service_task}.
+  \item Then, I deploy that process locally `http://localhost:8080/camunda/app/cockpit`.
+  \item Next, I added the python code from camunda python external client repo (https://github.com/camunda-community-hub/camunda-external-task-client-python3)
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.50\linewidth]{service_task.png}
+    \caption{Service Task}
+    \label{fig:service_task}
+\end{figure}
 
 \pagebreak
 
 \section{What I Learned}
+
+Here are some key points that I learned from using camunda:
+
+\begin{itemize}
+  \item Camunda as a whole and its benefits.
+  \item The different components of the Camunda Platform.
+  \item The basics of BPMN, the standard for process modeling.
+  \item Creating processes using camunda modeler.
+  \item Deploying and running process models using Camunda Platform.
+\end{itemize}
 
 \pagebreak
 

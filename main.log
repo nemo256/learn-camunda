@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  11 JUL 2023 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  11 JUL 2023 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,9 +844,29 @@ Overfull \hbox (55.52563pt too wide) in paragraph at lines 145--146
 p://localhost:8080/camunda/app/tasklist`
  []
 
-[7 </home/n3m0/work/learn-camunda/simple_process.png>] [8] [9]
+[7 </home/n3m0/work/learn-camunda/simple_process.png>]
+Overfull \hbox (69.75604pt too wide) in paragraph at lines 153--154
+[]\OT1/cmr/m/n/12 Here are the steps it took me to im-ple-ment it (fol-low-ing 
+in-struc-tions from https://github.com/camunda-
+ []
 
-LaTeX Warning: Empty bibliography on input line 165.
+
+Overfull \hbox (86.06985pt too wide) in paragraph at lines 161--162
+[]\OT1/cmr/m/n/12 Next, I added the python code from ca-munda python ex-ter-nal
+ client repo (https://github.com/camunda-
+ []
+
+<service_task.png, id=35, 448.67625pt x 183.68625pt>
+File: service_task.png Graphic file (type png)
+<use service_task.png>
+Package pdftex.def Info: service_task.png  used on input line 166.
+(pdftex.def)             Requested size: 234.8775pt x 96.15642pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 </home/n3m0/work/learn-camunda/service_task.png>]
+
+LaTeX Warning: Empty bibliography on input line 191.
 
 [10] (/home/n3m0/work/learn-camunda/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -854,22 +874,23 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17207 strings out of 477985
- 358817 string characters out of 5840059
+ 17215 strings out of 477985
+ 358978 string characters out of 5840059
  1856388 words of memory out of 5000000
- 37205 multiletter control sequences out of 15000+600000
+ 37212 multiletter control sequences out of 15000+600000
  518457 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,13n,91p,707b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
-cm-super/sfrm1200.pfb>
-Output written on /home/n3m0/work/learn-camunda/main.pdf (11 pages, 118228 byte
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1
+200.pfb>
+Output written on /home/n3m0/work/learn-camunda/main.pdf (11 pages, 140330 byte
 s).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
