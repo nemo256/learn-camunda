@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  11 JUL 2023 11:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  11 JUL 2023 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -827,7 +827,7 @@ File: bpmn.png Graphic file (type png)
 Package pdftex.def Info: bpmn.png  used on input line 76.
 (pdftex.def)             Requested size: 164.41711pt x 120.02917pt.
  [4 </home/n3m0/work/learn-camunda/bpmn.png>]
-Overfull \hbox (45.9952pt too wide) in paragraph at lines 99--100
+Overfull \hbox (45.9952pt too wide) in paragraph at lines 101--102
 []\OT1/cmr/m/n/12 Downloading Ca-munda Plat-form 7 Com-mu-nity edi-tion from (h
 ttps://camunda.com/download/)
  []
@@ -836,13 +836,13 @@ ttps://camunda.com/download/)
 <simple_process.png, id=31, 1183.42125pt x 393.47pt>
 File: simple_process.png Graphic file (type png)
 <use simple_process.png>
-Package pdftex.def Info: simple_process.png  used on input line 129.
+Package pdftex.def Info: simple_process.png  used on input line 131.
 (pdftex.def)             Requested size: 422.77664pt x 140.56238pt.
- [7 </home/n3m0/work/learn-camunda/simple_process.png>] [8] [9]
+ [7 </home/n3m0/work/learn-camunda/simple_process.png>] [8]
 
-LaTeX Warning: Empty bibliography on input line 162.
+LaTeX Warning: Empty bibliography on input line 157.
 
-[10] (/home/n3m0/work/learn-camunda/main.aux)
+[9] (/home/n3m0/work/learn-camunda/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -850,7 +850,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  17207 strings out of 477985
  358817 string characters out of 5840059
- 1857388 words of memory out of 5000000
+ 1856388 words of memory out of 5000000
  37205 multiletter control sequences out of 15000+600000
  518457 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -859,11 +859,11 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 cm-super/sfrm1200.pfb>
-Output written on /home/n3m0/work/learn-camunda/main.pdf (11 pages, 118220 byte
+Output written on /home/n3m0/work/learn-camunda/main.pdf (10 pages, 116726 byte
 s).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
