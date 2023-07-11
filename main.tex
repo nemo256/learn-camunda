@@ -105,8 +105,31 @@ Camunda is fairly simple to install (for me I installed it in linux):
 \pagebreak
 
 \section{Creating a Simple Process}
+
   \subsection{Designing a Process}
+  
+For this section, I have decided to implement a small simple project using BPMN in Camunda to learn more about it.
+For designing the process, here are the steps I did to implement a new employee integration system:
+
+\begin{itemize}
+  \item A start process is initiated to start the process of employee integration.
+  \item A first task (user task) is created that represents collecting user information such as Identification, employment forms, certifications..etc
+  \item The next task is assigning the new employee to various tasks and departements.
+  \item Next, we execute parralel tasks (first one is a user task which orients the new employee and provides information about company policies, culture, and team introductions, and the second task is a service task which is used to automate generating welcome emails, provisioning accounts, and preparing employee workstations).
+  \item The last task is reviewing all the documents by the HR departement to confirm completion of all tasks.
+  \item and now the end event is triggered to end the process.
+\end{itemize}
+
   \subsection{Executing the Process}
+
+Here is the process I used to deploy and execute the process:
+
+\begin{itemize}
+  \item First, I exported the BPMN file which contains the XML representation.
+  \item Then, we can access it on `http://localhost:8080/camunda/app/cockpit` by loggin in using demo / demo as a username and password.
+  \item We now can create a deployment by importing the BPMN file.
+  \item And finally, we check for the state of the process.
+\end{itemize}
 
 \pagebreak
 

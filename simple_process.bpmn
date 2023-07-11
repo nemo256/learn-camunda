@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0ykekfa" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.10.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0">
+  <bpmn:process id="Process_0" isExecutable="true">
+    <bpmn:extensionElements />
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_049xn3u</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_049xn3u" sourceRef="StartEvent_1" targetRef="Activity_0" />
+    <bpmn:userTask id="Activity_0" name="Collect documents">
+      <bpmn:documentation>This is a task that represents the collection of necessary documents from the new employee, such as identification, employment forms, and certifications.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <zeebe:assignmentDefinition assignee="CTO" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_049xn3u</bpmn:incoming>
+      <bpmn:outgoing>Flow_1wze8s9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1wze8s9" sourceRef="Activity_0" targetRef="Activity_1" />
+    <bpmn:userTask id="Activity_1" name="Assign tasks">
+      <bpmn:documentation>This is a task that represents assigning various tasks to different departments or individuals, such as setting up IT accounts, ordering equipment..etc</bpmn:documentation>
+      <bpmn:extensionElements>
+        <zeebe:assignmentDefinition assignee="Manager" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1wze8s9</bpmn:incoming>
+      <bpmn:outgoing>Flow_0zauw02</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0zauw02" sourceRef="Activity_1" targetRef="Gateway_0" />
+    <bpmn:parallelGateway id="Gateway_0">
+      <bpmn:documentation>This gateway is used to split the process flow to handle multiple tasks simultaneously.</bpmn:documentation>
+      <bpmn:incoming>Flow_0zauw02</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pxow5i</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1d401r2</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_0pxow5i" sourceRef="Gateway_0" targetRef="Activity_2" />
+    <bpmn:sequenceFlow id="Flow_1d401r2" sourceRef="Gateway_0" targetRef="Activity_3" />
+    <bpmn:userTask id="Activity_2" name="Orient new employee">
+      <bpmn:documentation>This is a task that represents conducting employee orientation sessions, providing information about company policies, culture, and team introductions.</bpmn:documentation>
+      <bpmn:incoming>Flow_0pxow5i</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g7ig8o</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_3" name="Generate employee account">
+      <bpmn:documentation>This task is used to automate generating welcome emails, provisioning accounts, and preparing employee workstations.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="generate-31" retries="3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1d401r2</bpmn:incoming>
+      <bpmn:outgoing>Flow_1pixn0y</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1g7ig8o" sourceRef="Activity_2" targetRef="Activity_4" />
+    <bpmn:sequenceFlow id="Flow_1pixn0y" sourceRef="Activity_3" targetRef="Activity_4" />
+    <bpmn:userTask id="Activity_4" name="Review by HR">
+      <bpmn:documentation>This task is used to review the documents by the HR department to confirm the completion of all tasks.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <zeebe:assignmentDefinition assignee="HR" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1g7ig8o</bpmn:incoming>
+      <bpmn:incoming>Flow_1pixn0y</bpmn:incoming>
+      <bpmn:outgoing>Flow_1fep5u1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0jginlu" name="End">
+      <bpmn:incoming>Flow_1fep5u1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1fep5u1" sourceRef="Activity_4" targetRef="Event_0jginlu" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0">
+      <bpmndi:BPMNShape id="Activity_17akg8c_di" bpmnElement="Activity_0">
+        <dc:Bounds x="240" y="137" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0yp0lr4_di" bpmnElement="Activity_1">
+        <dc:Bounds x="380" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0i7aqm1_di" bpmnElement="Gateway_0">
+        <dc:Bounds x="515" y="152" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="159" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="157" y="202" width="26" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0i4l3pi_di" bpmnElement="Activity_3">
+        <dc:Bounds x="580" y="190" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1syw9ao_di" bpmnElement="Activity_2">
+        <dc:Bounds x="580" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1dy7i7m_di" bpmnElement="Activity_4">
+        <dc:Bounds x="760" y="137" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0jginlu_di" bpmnElement="Event_0jginlu">
+        <dc:Bounds x="912" y="159" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="920" y="202" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_049xn3u_di" bpmnElement="Flow_049xn3u">
+        <di:waypoint x="188" y="177" />
+        <di:waypoint x="240" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wze8s9_di" bpmnElement="Flow_1wze8s9">
+        <di:waypoint x="340" y="177" />
+        <di:waypoint x="380" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zauw02_di" bpmnElement="Flow_0zauw02">
+        <di:waypoint x="480" y="177" />
+        <di:waypoint x="515" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pxow5i_di" bpmnElement="Flow_0pxow5i">
+        <di:waypoint x="540" y="152" />
+        <di:waypoint x="540" y="120" />
+        <di:waypoint x="580" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d401r2_di" bpmnElement="Flow_1d401r2">
+        <di:waypoint x="540" y="202" />
+        <di:waypoint x="540" y="230" />
+        <di:waypoint x="580" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pixn0y_di" bpmnElement="Flow_1pixn0y">
+        <di:waypoint x="680" y="230" />
+        <di:waypoint x="720" y="230" />
+        <di:waypoint x="720" y="177" />
+        <di:waypoint x="760" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g7ig8o_di" bpmnElement="Flow_1g7ig8o">
+        <di:waypoint x="680" y="120" />
+        <di:waypoint x="720" y="120" />
+        <di:waypoint x="720" y="177" />
+        <di:waypoint x="760" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fep5u1_di" bpmnElement="Flow_1fep5u1">
+        <di:waypoint x="860" y="177" />
+        <di:waypoint x="912" y="177" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
