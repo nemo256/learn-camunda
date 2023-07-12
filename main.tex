@@ -159,11 +159,12 @@ Here are the steps it took me to implement it (following instructions from https
   \item I then created a simple BPMN process using camunda modeler which contains a service task which has a topicName (for integration) as you can see in figure \ref{fig:service_task}.
   \item Then, I deploy that process locally `http://localhost:8080/camunda/app/cockpit`.
   \item Next, I added the python code from camunda python external client repo (https://github.com/camunda-community-hub/camunda-external-task-client-python3)
+  \item Finally, executing the python code and letting it run as a daemon, we can see that it gets executed whenever the process is started.
 \end{itemize}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.50\linewidth]{service_task.png}
+    \includegraphics[width=.37\linewidth]{service_task.png}
     \caption{Service Task}
     \label{fig:service_task}
 \end{figure}

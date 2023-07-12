@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  11 JUL 2023 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  12 JUL 2023 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -859,14 +859,14 @@ Overfull \hbox (86.06985pt too wide) in paragraph at lines 161--162
 <service_task.png, id=35, 448.67625pt x 183.68625pt>
 File: service_task.png Graphic file (type png)
 <use service_task.png>
-Package pdftex.def Info: service_task.png  used on input line 166.
-(pdftex.def)             Requested size: 234.8775pt x 96.15642pt.
+Package pdftex.def Info: service_task.png  used on input line 167.
+(pdftex.def)             Requested size: 173.80705pt x 71.15524pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 </home/n3m0/work/learn-camunda/service_task.png>]
 
-LaTeX Warning: Empty bibliography on input line 191.
+LaTeX Warning: Empty bibliography on input line 192.
 
 [10] (/home/n3m0/work/learn-camunda/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -886,7 +886,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1
 200.pfb>
-Output written on /home/n3m0/work/learn-camunda/main.pdf (11 pages, 140330 byte
+Output written on /home/n3m0/work/learn-camunda/main.pdf (11 pages, 140440 byte
 s).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
