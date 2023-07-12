@@ -6,7 +6,8 @@
 \contentsline {subsection}{\numberline {2.3}Learning Process and Resources}{4}{}%
 \contentsline {section}{\numberline {3}What is Camunda ?}{4}{}%
 \contentsline {subsection}{\numberline {3.1}Introduction}{4}{}%
-\contentsline {subsection}{\numberline {3.2}Installation and Setup}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Camunda Platform 7 vs 8}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Installation and Setup}{5}{}%
 \contentsline {section}{\numberline {4}Creating a Simple Process}{6}{}%
 \contentsline {subsection}{\numberline {4.1}Designing a Process}{6}{}%
 \contentsline {subsection}{\numberline {4.2}Executing the Process}{7}{}%
