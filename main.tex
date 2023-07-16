@@ -60,12 +60,26 @@
 
   \begin{itemize}
     \item Process.
-    \item Activities (Tasks, Sub-Processes, and Call activities).
+    \item Activities (Tasks, Sub-Processes, and Call activities)...
+      \\
+      Tasks can be divided into many types:
+
+      \begin{itemize}
+        \item Service Task (Invoke or execute business logic)
+        \item Send Task (Send a message)
+        \item User Task (A task performed by a human participant)
+        \item Business Rule Task (Execute an automated business decision)
+        \item Script Task (Execute a Script)
+        \item Receive Task (Wait for a message to arrive)
+        \item Manual Task (A task which is performed externally)
+      \end{itemize}
+
     \item Events (Start Events, Intermediate Events, and End Events).
     \item Gateways (Exclusive, Parallel, and Inclusive Gateways)
     \item Sequence Flow.
     \item Data Objects.
   \end{itemize}
+
 
   \pagebreak
 
@@ -95,20 +109,7 @@
 
   \subsection{Camunda Platform 7 vs 8}
 
-  The key difference between Camunda Platform 7 vs 8 is that Camunda platform 8 has more features (Connectors, Tooling, Flow engine, More scalable...), it is also not backwards compatible which in my opinion means that choosing one of them depends on the given task and not just going for the latest version.
-
-  \subsection{Installation and Setup}
-
-  Camunda is fairly simple to install (for me I installed it in linux):
-
-  \begin{itemize}
-    \item Downloading Camunda Platform 7 Community edition from (https://camunda.com/download/) the linux version comes in Zip and Tar formats.
-    \item Extract the Zip / Tar.
-    \item Run the script `./start.sh` to launch camunda platform.
-    \item Now we can navigate to `http://localhost:8080/camunda-welcome/index.html` and explore camunda features.
-  \end{itemize}
-
-  \pagebreak
+  The key difference between Camunda Platform 7 vs 8 is that Camunda platform 8 has more features (Connectors, Tooling, Flow engine, More scalable...), it is also not backwards compatible because Camunda Platform 8 is an extention of Camunda Cloud.
 
   \section{Creating a Simple Process}
 
