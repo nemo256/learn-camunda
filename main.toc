@@ -3,13 +3,13 @@
 \contentsline {section}{\numberline {2}What is BPMN ?}{3}{}%
 \contentsline {subsection}{\numberline {2.1}Introduction}{3}{}%
 \contentsline {subsection}{\numberline {2.2}Basics of BPMN}{3}{}%
-\contentsline {subsection}{\numberline {2.3}Learning Process and Resources}{5}{}%
-\contentsline {section}{\numberline {3}What is Camunda ?}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Introduction}{5}{}%
-\contentsline {subsection}{\numberline {3.2}Camunda Platform 7 vs 8}{6}{}%
-\contentsline {section}{\numberline {4}Creating a Simple Process}{6}{}%
-\contentsline {subsection}{\numberline {4.1}Designing a Process}{6}{}%
-\contentsline {subsection}{\numberline {4.2}Executing the Process}{8}{}%
-\contentsline {subsection}{\numberline {4.3}Adding an external task (service task)}{9}{}%
-\contentsline {section}{\numberline {5}What I Learned}{10}{}%
-\contentsline {section}{\numberline {6}Conclusion}{11}{}%
+\contentsline {subsection}{\numberline {2.3}Learning Process and Resources}{4}{}%
+\contentsline {section}{\numberline {3}What is Camunda ?}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Camunda Platform 7 vs 8}{5}{}%
+\contentsline {section}{\numberline {4}Creating a Simple Process}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Designing a Process}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Executing the Process}{6}{}%
+\contentsline {subsection}{\numberline {4.3}Adding an external task (service task)}{7}{}%
+\contentsline {section}{\numberline {5}What I Learned}{8}{}%
+\contentsline {section}{\numberline {6}Conclusion}{8}{}%

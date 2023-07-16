@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  16 JUL 2023 10:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.9)  16 JUL 2023 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,50 +820,53 @@ me/n3m0/work/learn-camunda/main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [1] [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3] [
-4]
-<bpmn.png, id=22, 263.98625pt x 192.72pt>
+ [1] [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3]
+<bpmn.png, id=19, 263.98625pt x 192.72pt>
 File: bpmn.png Graphic file (type png)
 <use bpmn.png>
-Package pdftex.def Info: bpmn.png  used on input line 90.
+Package pdftex.def Info: bpmn.png  used on input line 86.
 (pdftex.def)             Requested size: 164.41711pt x 120.02917pt.
- [5 </home/n3m0/work/learn-camunda/bpmn.png>] [6] [7]
-<simple_process.png, id=34, 1183.42125pt x 393.47pt>
+ [4 </home/n3m0/work/learn-camunda/bpmn.png>] [5]
+<simple_process.png, id=27, 1183.42125pt x 393.47pt>
 File: simple_process.png Graphic file (type png)
 <use simple_process.png>
-Package pdftex.def Info: simple_process.png  used on input line 136.
+Package pdftex.def Info: simple_process.png  used on input line 132.
 (pdftex.def)             Requested size: 422.77664pt x 140.56238pt.
 
-Overfull \hbox (55.52563pt too wide) in paragraph at lines 150--151
+Overfull \hbox (55.52563pt too wide) in paragraph at lines 146--147
 []\OT1/cmr/m/n/12 Now, we can go to the tasklist which is ac-ces-si-ble on `htt
 p://localhost:8080/camunda/app/tasklist`
  []
 
-[8 </home/n3m0/work/learn-camunda/simple_process.png>]
-Overfull \hbox (69.75604pt too wide) in paragraph at lines 158--159
+[6 </home/n3m0/work/learn-camunda/simple_process.png>]
+Overfull \hbox (69.75604pt too wide) in paragraph at lines 154--155
 []\OT1/cmr/m/n/12 Here are the steps it took me to im-ple-ment it (fol-low-ing 
 in-struc-tions from https://github.com/camunda-
  []
 
 
-Overfull \hbox (86.06985pt too wide) in paragraph at lines 166--167
+Overfull \hbox (86.06985pt too wide) in paragraph at lines 162--163
 []\OT1/cmr/m/n/12 Next, I added the python code from ca-munda python ex-ter-nal
  client repo (https://github.com/camunda-
  []
 
-<service_task.png, id=38, 448.67625pt x 183.68625pt>
+<service_task.png, id=32, 448.67625pt x 183.68625pt>
 File: service_task.png Graphic file (type png)
 <use service_task.png>
-Package pdftex.def Info: service_task.png  used on input line 172.
+Package pdftex.def Info: service_task.png  used on input line 168.
 (pdftex.def)             Requested size: 173.80705pt x 71.15524pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9] [10 </home/n3m0/work/learn-camunda/service_task.png>]
+[7]
 
-LaTeX Warning: Empty bibliography on input line 202.
+LaTeX Warning: Empty bibliography on input line 196.
 
-[11] (/home/n3m0/work/learn-camunda/main.aux)
+[8 </home/n3m0/work/learn-camunda/service_task.png>]
+(/home/n3m0/work/learn-camunda/main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -871,7 +874,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  17215 strings out of 477985
  358978 string characters out of 5840059
- 1857388 words of memory out of 5000000
+ 1856388 words of memory out of 5000000
  37212 multiletter control sequences out of 15000+600000
  518457 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -881,11 +884,11 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1
 200.pfb>
-Output written on /home/n3m0/work/learn-camunda/main.pdf (12 pages, 141673 byte
-s).
+Output written on /home/n3m0/work/learn-camunda/main.pdf (9 pages, 139863 bytes
+).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
