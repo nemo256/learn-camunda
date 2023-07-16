@@ -23,40 +23,40 @@
 
 \fontsize{12}{20}\selectfont{
 
-\pagebreak
+  \pagebreak
 
-\section{Introduction}
+  \section{Introduction}
 
-In this article, I will share my journey of learning Camunda, an open-source platform for workflow and decision automation. As businesses strive for efficiency and agility, understanding tools like Camunda becomes crucial for streamlining processes and optimizing operations. I am very motivated to explore this powerful platform, and I embarked on a learning adventure to uncover the possibilities it offers.
+  In this article, I will share my journey of learning Camunda, an open-source platform for workflow and decision automation. As businesses strive for efficiency and agility, understanding tools like Camunda becomes crucial for streamlining processes and optimizing operations. I am very motivated to explore this powerful platform, and I embarked on a learning adventure to uncover the possibilities it offers.
 
-Throughout this article, I will provide insights into the fundamentals of BPMN (Business Process Model and Notation) and its role in visualizing and modeling business processes. I will then dive into my experience with Camunda after using it in a small project, I'll also give a brief step by step learning journey from the initial installation and setup to exploring the Camunda Modeler, which allowed me to create clear and concise process diagrams.
+  Throughout this article, I will provide insights into the fundamentals of BPMN (Business Process Model and Notation) and its role in visualizing and modeling business processes. I will then dive into my experience with Camunda after using it in a small project, I'll also give a brief step by step learning journey from the initial installation and setup to exploring the Camunda Modeler, which allowed me to create clear and concise process diagrams.
 
-I will also share valuable lessons learned,
+  I will also share valuable lessons learned,
 
   \subsection{Motivation and Goals}
 
-I am motivated to learn camunda as it is a necessary tool for infrastructure automation and to also enhance productivity.
-Here are some goals that I want to accomplish:
+  I am motivated to learn camunda as it is a necessary tool for infrastructure automation and to also enhance productivity.
+  Here are some goals that I want to accomplish:
 
-\begin{itemize}
-  \item Gain a solid understanding of BPMN.
-  \item Understand camunda's workflow engine.
-  \item Effectively model and automate complex business processes.
-  \item Camunda integration with other systems.
-  \item Collaboration with co-workers.
-\end{itemize}
+  \begin{itemize}
+    \item Gain a solid understanding of BPMN.
+    \item Understand camunda's workflow engine.
+    \item Effectively model and automate complex business processes.
+    \item Camunda integration with other systems.
+    \item Collaboration with co-workers.
+  \end{itemize}
 
-\pagebreak
+  \pagebreak
 
-\section{What is BPMN ?}
+  \section{What is BPMN ?}
 
   \subsection{Introduction}
 
-Business Process Model and Notation was developed as a graphical notation to represent complex processes and address these challenges. It is maintained by the non-profit The Object Management Group (OMG) and employed by numerous organizations globally. The visual nature of BPMN enables greater collaboration between different teams.
+  Business Process Model and Notation was developed as a graphical notation to represent complex processes and address these challenges. It is maintained by the non-profit The Object Management Group (OMG) and employed by numerous organizations globally. The visual nature of BPMN enables greater collaboration between different teams.
 
   \subsection{Basics of BPMN}
 
-Here are the foundational elements of BPMN:
+  Here are the foundational elements of BPMN:
 
   \begin{itemize}
     \item Process.
@@ -67,39 +67,39 @@ Here are the foundational elements of BPMN:
     \item Data Objects.
   \end{itemize}
 
-\pagebreak
+  \pagebreak
 
-Here is a figure representing BPMN components:
+  Here is a figure representing BPMN components:
 
-\begin{figure}[h]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=.35\linewidth]{bpmn.png}
     \caption{BPMN components}
     \label{fig:bpmn}
-\end{figure}
+  \end{figure}
 
   \subsection{Learning Process and Resources}
-I started by learning the concepts of each elements used in BPMNs (tasks, symbols, activities...), and then since I had previous knowledge of modeling languages and UML diagrams, so it all seemed similiar.
-Then, I created some simple examples :
-\\
-One of them was automating a Car Starting System (Each car executes some checks before starting).
-I also read some best practices on using BPMNs.
+  I started by learning the concepts of each elements used in BPMNs (tasks, symbols, activities...), and then since I had previous knowledge of modeling languages and UML diagrams, so it all seemed similiar.
+  Then, I created some simple examples :
+  \\
+  One of them was automating a Car Starting System (Each car executes some checks before starting).
+  I also read some best practices on using BPMNs.
 
-\section{What is Camunda ?}
+  \section{What is Camunda ?}
 
   \subsection{Introduction}
 
-Camunda is an open-source platform for workflow and decision automation. It provides a powerful workflow engine, BPMN modeling capabilities, and tools for managing and executing business processes. With Camunda, organizations can automate and optimize their business processes, improve efficiency, and enhance visibility into process execution.
+  Camunda is an open-source platform for workflow and decision automation. It provides a powerful workflow engine, BPMN modeling capabilities, and tools for managing and executing business processes. With Camunda, organizations can automate and optimize their business processes, improve efficiency, and enhance visibility into process execution.
 
-\pagebreak
+  \pagebreak
 
   \subsection{Camunda Platform 7 vs 8}
 
-The key difference between Camunda Platform 7 vs 8 is that Camunda platform 8 has more features (Connectors, Tooling, Flow engine, More scalable...), it is also not backwards compatible which in my opinion means that choosing one of them depends on the given task and not just going for the latest version.
+  The key difference between Camunda Platform 7 vs 8 is that Camunda platform 8 has more features (Connectors, Tooling, Flow engine, More scalable...), it is also not backwards compatible which in my opinion means that choosing one of them depends on the given task and not just going for the latest version.
 
   \subsection{Installation and Setup}
 
-Camunda is fairly simple to install (for me I installed it in linux):
+  Camunda is fairly simple to install (for me I installed it in linux):
 
   \begin{itemize}
     \item Downloading Camunda Platform 7 Community edition from (https://camunda.com/download/) the linux version comes in Zip and Tar formats.
@@ -108,96 +108,96 @@ Camunda is fairly simple to install (for me I installed it in linux):
     \item Now we can navigate to `http://localhost:8080/camunda-welcome/index.html` and explore camunda features.
   \end{itemize}
 
-\pagebreak
+  \pagebreak
 
-\section{Creating a Simple Process}
+  \section{Creating a Simple Process}
 
   \subsection{Designing a Process}
-  
-For this section, I have decided to implement a small simple project using BPMN in Camunda to learn more about it.
-For designing the process, here are the steps I did to implement a new employee integration system:
 
-\begin{itemize}
-  \item A start process is initiated to start the process of employee integration.
-  \item A first task (user task) is created that represents collecting user information such as Identification, employment forms, certifications..etc
-  \item The next task is assigning the new employee to various tasks and departements.
-  \item Next, we execute parralel tasks (first one is a user task which orients the new employee and provides information about company policies, culture, and team introductions, and the second task is a service task which is used to automate generating welcome emails, provisioning accounts, and preparing employee workstations).
-  \item The last task is reviewing all the documents by the HR departement to confirm completion of all tasks.
-  \item and now the end event is triggered to end the process.
-\end{itemize}
+  For this section, I have decided to implement a small simple project using BPMN in Camunda to learn more about it.
+  For designing the process, here are the steps I did to implement a new employee integration system:
 
-\pagebreak
+  \begin{itemize}
+    \item A start process is initiated to start the process of employee integration.
+    \item A first task (user task) is created that represents collecting user information such as Identification, employment forms, certifications..etc
+    \item The next task is assigning the new employee to various tasks and departements.
+    \item Next, we execute parralel tasks (first one is a user task which orients the new employee and provides information about company policies, culture, and team introductions, and the second task is a service task which is used to automate generating welcome emails, provisioning accounts, and preparing employee workstations).
+    \item The last task is reviewing all the documents by the HR departement to confirm completion of all tasks.
+    \item and now the end event is triggered to end the process.
+  \end{itemize}
 
-Here is how the implemented simple process looks like:
+  \pagebreak
 
-\begin{figure}[h]
+  Here is how the implemented simple process looks like:
+
+  \begin{figure}[h]
     \centering
     \includegraphics[width=.90\linewidth]{simple_process.png}
     \caption{Simple Process}
     \label{fig:simple_process}
-\end{figure}
+  \end{figure}
 
   \subsection{Executing the Process}
 
-Here is the process I used to deploy and execute the process:
+  Here is the process I used to deploy and execute the process:
 
-\begin{itemize}
-  \item First, I exported the BPMN file which contains the XML representation.
-  \item Then, we can access it on `http://localhost:8080/camunda/app/cockpit` by loggin in using demo / demo as a username and password.
-  \item We now can create a deployment by importing the BPMN file.
-  \item We then check for the state of the process.
-  \item Now, we can go to the tasklist which is accessible on `http://localhost:8080/camunda/app/tasklist` and start the process.
-  \item Finally by checking on Camunda Cockpit, we can see that there is an instance running on the first task.
-\end{itemize}
+  \begin{itemize}
+    \item First, I exported the BPMN file which contains the XML representation.
+    \item Then, we can access it on `http://localhost:8080/camunda/app/cockpit` by loggin in using demo / demo as a username and password.
+    \item We now can create a deployment by importing the BPMN file.
+    \item We then check for the state of the process.
+    \item Now, we can go to the tasklist which is accessible on `http://localhost:8080/camunda/app/tasklist` and start the process.
+    \item Finally by checking on Camunda Cockpit, we can see that there is an instance running on the first task.
+  \end{itemize}
 
   \subsection{Adding an external task (service task)}
 
-In this section I will be implementing small script in python that will be integrated with camunda as a service task.
+  In this section I will be implementing small script in python that will be integrated with camunda as a service task.
 
-Here are the steps it took me to implement it (following instructions from https://github.com/camunda-community-hub/camunda-external-task-client-python3):
+  Here are the steps it took me to implement it (following instructions from https://github.com/camunda-community-hub/camunda-external-task-client-python3):
 
-\begin{itemize}
-  \item First I initialized a new python project using a python virtual environment `python -m venv venv`, then sourcing the `venv/bin/activate` script to activate the python virtual environment.
-  \item Next, I installed the camunda external task client using the command `pip install camunda-external-task-client-python3`
-  \item Then, I used the command `pip freeze $ > $ requirements.txt` to save all the dependencies.
-  \item I then created a simple BPMN process using camunda modeler which contains a service task which has a topicName (for integration) as you can see in figure \ref{fig:service_task}.
-  \item Then, I deploy that process locally `http://localhost:8080/camunda/app/cockpit`.
-  \item Next, I added the python code from camunda python external client repo (https://github.com/camunda-community-hub/camunda-external-task-client-python3)
-  \item Finally, executing the python code and letting it run as a daemon, we can see that it gets executed whenever the process is started.
-\end{itemize}
+  \begin{itemize}
+    \item First I initialized a new python project using a python virtual environment `python -m venv venv`, then sourcing the `venv/bin/activate` script to activate the python virtual environment.
+    \item Next, I installed the camunda external task client using the command `pip install camunda-external-task-client-python3`
+    \item Then, I used the command `pip freeze $ > $ requirements.txt` to save all the dependencies.
+    \item I then created a simple BPMN process using camunda modeler which contains a service task which has a topicName (for integration) as you can see in figure \ref{fig:service_task}.
+    \item Then, I deploy that process locally `http://localhost:8080/camunda/app/cockpit`.
+    \item Next, I added the python code from camunda python external client repo (https://github.com/camunda-community-hub/camunda-external-task-client-python3)
+    \item Finally, executing the python code and letting it run as a daemon, we can see that it gets executed whenever the process is started.
+  \end{itemize}
 
-\begin{figure}[h]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=.37\linewidth]{service_task.png}
     \caption{Service Task}
     \label{fig:service_task}
-\end{figure}
+  \end{figure}
 
-\pagebreak
+  \pagebreak
 
-\section{What I Learned}
+  \section{What I Learned}
 
-Here are some key points that I learned from using camunda:
+  Here are some key points that I learned from using camunda:
 
-\begin{itemize}
-  \item Camunda as a whole and its benefits.
-  \item The different components of the Camunda Platform.
-  \item The basics of BPMN, the standard for process modeling.
-  \item Execution and Orchestration of the process.
-  \item User task management.
-  \item Integration and deployment.
-  \item Monitoring the process.
-\end{itemize}
+  \begin{itemize}
+    \item Camunda as a whole and its benefits.
+    \item The different components of the Camunda Platform.
+    \item The basics of BPMN, the standard for process modeling.
+    \item Execution and Orchestration of the process.
+    \item User task management.
+    \item Integration and deployment.
+    \item Monitoring the process.
+  \end{itemize}
 
-\pagebreak
+  \pagebreak
 
-\section{Conclusion}
+  \section{Conclusion}
 
-In conclusion, my journey of learning Camunda has provided me with valuable knowledge and skills in workflow automation and process management. Camunda's flexible platform, user task management capabilities, integration options, and community support make it a powerful tool for optimizing business processes.
-And now I think I am ready for real camunda projects.
+  In conclusion, my journey of learning Camunda has provided me with valuable knowledge and skills in workflow automation and process management. Camunda's flexible platform, user task management capabilities, integration options, and community support make it a powerful tool for optimizing business processes.
+  And now I think I am ready for real camunda projects.
 
-}
+  }
 
-\printbibliography
+  \printbibliography
 
 \end{document}
