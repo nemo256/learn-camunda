@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage{EngReport}
+\usepackage{enumitem}
 \usepackage{titleref}
 \makeatletter
 \newcommand*{\currentname}{\TR@currentTitle}
@@ -11,6 +12,31 @@
 \onehalfspacing
 \graphicspath{{images/}}
 \geometry{letterpaper, portrait, includeheadfoot=true, hmargin=1in, vmargin=1in}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 %\fontsize{font size}{vertsize (usually 1.2x)}\selectfont
 
@@ -38,7 +64,7 @@
   I am motivated to learn camunda as it is a necessary tool for infrastructure automation and to also enhance productivity.
   Here are some goals that I want to accomplish:
 
-  \begin{itemize}
+  \begin{itemize}[noitemsep,nolistsep]
     \item Gain a solid understanding of BPMN.
     \item Understand camunda's workflow engine.
     \item Effectively model and automate complex business processes.
@@ -50,19 +76,17 @@
 
   \section{What is BPMN ?}
 
-  \subsection{Introduction}
-
   Business Process Model and Notation was developed as a graphical notation to represent complex processes and address these challenges. It is maintained by the non-profit The Object Management Group (OMG).
 
   \subsection{Basics of BPMN}
 
   Here are the foundational elements of BPMN:
 
-  \begin{itemize}
+  \begin{itemize}[noitemsep,nolistsep]
     \item Process.
     \item Activities (Tasks, Sub-Processes, and Call activities)...\\
       Tasks can be divided into many types, here are some of them:
-      \begin{itemize}
+      \begin{itemize}[noitemsep,nolistsep]
         \item Service Task (Invoke or execute business logic)
         \item User Task (A task performed by a human participant)
         \item Business Rule Task (Execute an automated business decision)
@@ -76,18 +100,6 @@
     \item Data Objects.
   \end{itemize}
 
-
-  \pagebreak
-
-  Here is a figure representing BPMN components:
-
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=.35\linewidth]{bpmn.png}
-    \caption{BPMN components}
-    \label{fig:bpmn}
-  \end{figure}
-
   \subsection{Learning Process and Resources}
   I started by learning the concepts of each elements used in BPMNs (tasks, symbols, activities...), and then since I had previous knowledge of modeling languages and UML diagrams, so it all seemed similiar.
   Then, I created some simple examples :
@@ -97,11 +109,7 @@
 
   \section{What is Camunda ?}
 
-  \subsection{Introduction}
-
   Camunda is an open-source platform for workflow and decision automation. It provides a powerful workflow engine, BPMN modeling capabilities, and tools for managing and executing business processes. With Camunda, organizations can automate and optimize their business processes, improve efficiency, and enhance visibility into process execution.
-
-  \pagebreak
 
   \subsection{Camunda Platform 7 vs 8}
 
@@ -114,7 +122,7 @@
   For this section, I have decided to implement a small simple project using BPMN in Camunda to learn more about it.
   For designing the process, here are the steps I did to implement a new employee integration system:
 
-  \begin{itemize}
+  \begin{itemize}[noitemsep,nolistsep]
     \item A start process is initiated to start the process of employee integration.
     \item A first task (user task) is created that represents collecting user information such as Identification, employment forms, certifications..etc
     \item The next task is assigning the new employee to various tasks and departements.
@@ -122,8 +130,6 @@
     \item The last task is reviewing all the documents by the HR departement to confirm completion of all tasks.
     \item and now the end event is triggered to end the process.
   \end{itemize}
-
-  \pagebreak
 
   Here is how the implemented simple process looks like:
 
@@ -138,7 +144,7 @@
 
   Here is the process I used to deploy and execute the process:
 
-  \begin{itemize}
+  \begin{itemize}[noitemsep,nolistsep]
     \item First, I exported the BPMN file which contains the XML representation.
     \item Then, we can access it on `http://localhost:8080/camunda/app/cockpit` by loggin in using demo / demo as a username and password.
     \item We now can create a deployment by importing the BPMN file.
@@ -153,13 +159,39 @@
 
   Here are the steps it took me to implement it (following instructions from https://github.com/camunda-community-hub/camunda-external-task-client-python3):
 
-  \begin{itemize}
+  \begin{itemize}[noitemsep,nolistsep]
     \item First I initialized a new python project using a python virtual environment `python -m venv venv`, then sourcing the `venv/bin/activate` script to activate the python virtual environment.
     \item Next, I installed the camunda external task client using the command `pip install camunda-external-task-client-python3`
     \item Then, I used the command `pip freeze $ > $ requirements.txt` to save all the dependencies.
     \item I then created a simple BPMN process using camunda modeler which contains a service task which has a topicName (for integration) as you can see in figure \ref{fig:service_task}.
     \item Then, I deploy that process locally `http://localhost:8080/camunda/app/cockpit`.
-    \item Next, I added the python code from camunda python external client repo (https://github.com/camunda-community-hub/camunda-external-task-client-python3)
+   
+    \pagebreak
+
+    \item Next, I added the python code from camunda python external client repo.
+\begin{lstlisting}
+import time
+from camunda.external_task.external_task import ExternalTask, TaskResult
+from camunda.external_task.external_task_worker import ExternalTaskWorker
+
+default_config = {
+    "maxTasks": 1, "lockDuration": 10000,
+    "asyncResponseTimeout": 5000, "retries": 3,
+    "retryTimeout": 5000, "sleepSeconds": 30
+}
+
+def handle_task(task: ExternalTask) -> TaskResult:
+    print("Hello world!")
+    return task.complete({"var1": 1, "var2": "value"}) 
+
+def random_true():
+    current_milli_time = int(round(time.time() * 1000))
+    return current_milli_time % 2 == 0
+
+if __name__ == '__main__':
+   ExternalTaskWorker(worker_id="1", config=default_config).subscribe("topicName", handle_task)
+\end{lstlisting}
+
     \item Finally, executing the python code and letting it run as a daemon, we can see that it gets executed whenever the process is started.
   \end{itemize}
 
@@ -176,7 +208,7 @@
 
   Here are some key points that I learned from using camunda:
 
-  \begin{itemize}
+  \begin{itemize}[noitemsep,nolistsep]
     \item Camunda as a whole and its benefits.
     \item The different components of the Camunda Platform.
     \item The basics of BPMN, the standard for process modeling.
