@@ -55,9 +55,7 @@
 
   In this article, I will share my journey of learning Camunda, an open-source platform for workflow and decision automation. As businesses strive for efficiency and agility, understanding tools like Camunda becomes crucial for streamlining processes and optimizing operations. I am very motivated to explore this powerful platform, and I embarked on a learning adventure to uncover the possibilities it offers.
 
-  Throughout this article, I will provide insights into the fundamentals of BPMN (Business Process Model and Notation) and its role in visualizing and modeling business processes. I will then dive into my experience with Camunda after using it in a small project.
-
-  I will also share valuable lessons learned,
+  I will share some valuable lessons learned throughout this article.
 
   \subsection{Motivation and Goals}
 
@@ -71,8 +69,6 @@
     \item Camunda integration with other systems.
     \item Collaboration with co-workers
   \end{itemize}
-
-  \pagebreak
 
   \section{What is BPMN ?}
 
@@ -106,6 +102,8 @@
   \\
   One of them was automating a Car Starting System (Each car executes some checks before starting).
   I also read some best practices on using BPMNs.
+
+  \pagebreak
 
   \section{What is Camunda ?}
 
@@ -150,7 +148,7 @@
     \item We now can create a deployment by importing the BPMN file.
     \item We then check for the state of the process.
     \item Now, we can go to the tasklist which is accessible on `http://localhost:8080/camunda/app/tasklist` and start the process.
-    \item Finally by checking on Camunda Cockpit, we can see that there is an instance running on the first task.
+    \item Finally by checking on Camunda Cockpit, we can see that there is an instance running.
   \end{itemize}
 
   \subsection{Adding an external task (service task)}
@@ -166,8 +164,6 @@
     \item I then created a simple BPMN process using camunda modeler which contains a service task which has a topicName (for integration) as you can see in figure \ref{fig:service_task}.
     \item Then, I deploy that process locally `http://localhost:8080/camunda/app/cockpit`.
    
-    \pagebreak
-
     \item Next, I added the python code from camunda python external client repo.
 \begin{lstlisting}
 import time
@@ -184,25 +180,12 @@ def handle_task(task: ExternalTask) -> TaskResult:
     print("Hello world!")
     return task.complete({"var1": 1, "var2": "value"}) 
 
-def random_true():
-    current_milli_time = int(round(time.time() * 1000))
-    return current_milli_time % 2 == 0
-
 if __name__ == '__main__':
    ExternalTaskWorker(worker_id="1", config=default_config).subscribe("topicName", handle_task)
 \end{lstlisting}
 
     \item Finally, executing the python code and letting it run as a daemon, we can see that it gets executed whenever the process is started.
   \end{itemize}
-
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=.37\linewidth]{service_task.png}
-    \caption{Service Task}
-    \label{fig:service_task}
-  \end{figure}
-
-  \pagebreak
 
   \section{What I Learned}
 
